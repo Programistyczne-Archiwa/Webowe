@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="styl.css" />
+
+        <script>
+            function getSize() {
+                const w = document.documentElement.clientWidth;
+                const h = document.documentElement.clientHeight;
+
+                document.getElementById("wh").innerHTML =
+                    "Szerokosc: " + w + "px Wysokosc: " + h + "px";
+            }
+        </script>
+    </head>
+    <body onload="getSize()" onresize="getSize()">
+        <div class="container">
+            <div class="starter-template text-center py-5">
+                <h1>Najpopularniejsze jezyki systemu Linux</h1>
+                <p style="font-size: 24px" id="wh"></p>
+            </div>
+
+            <div class="linux row">
+                <div class="col-xl-2">
+                    <a href="#"> <img src="ubuntu.png" alt="Ubuntu" /></a>
+                    <p class="akapit">Ubuntu</p>
+                    <p class="px-2 py-1 text-center">
+                        System oparty na dystrybucji Debian, przeznaczony do
+                        zastosowań biurowych, domowych i serwerowych. Według
+                        sondaży Ubuntu jest najczęściej instalowaną dystrybucją
+                        Linuxa na komputerach osobistych
+                    </p>
+                </div>
+                <div class="col-xl-2">
+                    <a href="#"><img src="mint.png" alt="Mint" /></a>
+                    <p class="akapit">Mint</p>
+                    <p class="px-2 py-1 text-center">
+                        Dystrybucja systemu GNU/Linux oparta na Ubuntu oraz
+                        Debianie, skierowana do początkujacych uzytkownikow.
+                        Prostota uzytkowania, komplet zainstalowanych aplikacji,
+                        wsparcie to najwazniejsze zalety systemu
+                    </p>
+                </div>
+                <div class="col-xl-2">
+                    <a href="#"><img src="kali.png" /></a>
+                    <p class="akapit">Kali</p>
+                    <p class="px-2 py-1 text-center">
+                        Kali to system przeznaczony dla bardziej zaawansowanych
+                        uzytkownikow. Zawiera komplet narzedzi ktore sa
+                        wykorzystywane do przeprowadzania testow penetracji, tj.
+                        bezpieczenstwa i lamania zabezpieczen
+                    </p>
+                </div>
+                <div class="col-xl-2">
+                    <a href="#"> <img src="ubuntu.png" alt="Ubuntu" /></a>
+                    <p class="akapit">Ubuntu</p>
+                    <p class="px-2 py-1 text-center">
+                        System oparty na dystrybucji Debian, przeznaczony do
+                        zastosowań biurowych, domowych i serwerowych. Według
+                        sondaży Ubuntu jest najczęściej instalowaną dystrybucją
+                        Linuxa na komputerach osobistych
+                    </p>
+                </div>
+                <div class="col-xl-2">
+                    <a href="#"><img src="mint.png" alt="Mint" /></a>
+                    <p class="akapit">Mint</p>
+                    <p class="px-2 py-1 text-center">
+                        Dystrybucja systemu GNU/Linux oparta na Ubuntu oraz
+                        Debianie, skierowana do początkujacych uzytkownikow.
+                        Prostota uzytkowania, komplet zainstalowanych aplikacji,
+                        wsparcie to najwazniejsze zalety systemu
+                    </p>
+                </div>
+                <div class="col-xl-2">
+                    <a href="#"><img src="kali.png" /></a>
+                    <p class="akapit">Kali</p>
+                    <p class="px-2 py-1 text-center">
+                        Kali to system przeznaczony dla bardziej zaawansowanych
+                        uzytkownikow. Zawiera komplet narzedzi ktore sa
+                        wykorzystywane do przeprowadzania testow penetracji, tj.
+                        bezpieczenstwa i lamania zabezpieczen
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
+<!-- dodac klase extra large i podzielic na 6 kolumn-->
