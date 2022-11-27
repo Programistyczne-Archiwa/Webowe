@@ -5,13 +5,88 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
         <style>
-            
+            span {
+                display: inline-block;
+                font-size: 40px;
+            }
+            @keyframes roll {
+                0% {
+                    transform: rotate(0);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
         </style>
     </head>
 
-    <body>
-        
+    <body style="margin: 0px; padding: 0px">
+        <div style="position: relative; float: left;">
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+        </div>
+        <div style="position: relative; float: left; left:90%">
+            <span>C</span>
+            <span>B</span>
+            <span>A</span>
+        </div>
     </body>
 
 </html>
+
+<script>
+    $(document).ready(function(){
+        $("div:eq(0)").animate(
+            {
+                left: "48%"
+            }, 1000, function(){
+                $("div:eq(0)").children("span").css(
+                    "animation", "roll 1s"
+                ).delay(1000);
+                $("div:eq(0)").children("span:eq(0)").animate(
+                    {
+                        color: "#63e03d"
+                    }, 1000)
+                $("div:eq(0)").children("span:eq(1)").animate(
+                    {
+                        color: "#36baad"
+                    }, 1000)
+                $("div:eq(0)").children("span:eq(2)").animate(
+                    {
+                        color: "#cf651f"
+                    }, 1000, function(){
+                        $("div:eq(0)").animate({
+                            left: "0%"
+                        })
+                    })
+            });
+        $("div:eq(1)").animate(
+            {
+                left: "49%"
+            }, 1000, function(){
+                $("div:eq(1)").children("span").css(
+                    "animation", "roll 1s"
+                ).delay(1000);
+                $("div:eq(1)").children("span:eq(0)").animate(
+                    {
+                        color: "#cf651f"
+                    }, 1000)
+                $("div:eq(1)").children("span:eq(1)").animate(
+                    {
+                        color: "#36baad"
+                    }, 1000)
+                $("div:eq(1)").children("span:eq(2)").animate(
+                    {
+                        color: "#63e03d"
+                    }, 1000, function(){
+                        $("div:eq(1)").animate({
+                            left: "91%"
+                        })
+                    })
+            });
+    });
+</script>
