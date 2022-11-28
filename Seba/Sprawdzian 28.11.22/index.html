@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script
+            src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+            integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+            crossorigin="anonymous"
+        ></script>
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 40px;
+            }
+            @keyframes roll {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span style="position: absolute; top: 0%; left: 0">B</span>
+            <span style="position: absolute; top: 0%; left: 80%">A</span>
+            <span style="position: absolute; top: 80%; left: 0">A</span>
+            <span style="position: absolute; top: 80%; left: 80%">B</span>
+        </div>
+    </body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $("span:eq(0)").animate(
+            {
+                top: "39%",
+                left: "39%",
+            },
+            1000
+        );
+        $("span:eq(1)").animate(
+            {
+                top: "39%",
+                left: "41%",
+            },
+            1000
+        );
+        $("span:eq(2)").animate(
+            {
+                top: "42%",
+                left: "39%",
+            },
+            1000
+        );
+        $("span:eq(3)").animate(
+            {
+                top: "42%",
+                left: "41%",
+            },
+            1000,
+            function () {
+                $("span:eq(0)").animate(
+                    {
+                        color: "#344feb",
+                    },
+                    1000
+                );
+                $("span:eq(1)").animate(
+                    {
+                        color: "#eb34d6",
+                    },
+                    1000
+                );
+                $("span:eq(2)").animate(
+                    {
+                        color: "#52b32e",
+                    },
+                    1000
+                );
+                $("span:eq(3)").animate(
+                    {
+                        color: "#a61e34",
+                    },
+                    1000,
+                    function () {
+                        $("span").css("animation", "roll 1s").delay(1000);
+                        $("span:eq(0)").animate(
+                            {
+                                top: "0%",
+                                left: "0%",
+                            },
+                            1000
+                        );
+                        $("span:eq(1)").animate(
+                            {
+                                top: "0%",
+                                left: "80%",
+                            },
+                            1000
+                        );
+                        $("span:eq(2)").animate(
+                            {
+                                top: "80%",
+                                left: "0%",
+                            },
+                            1000
+                        );
+                        $("span:eq(3)").animate(
+                            {
+                                top: "80%",
+                                left: "80%",
+                            },
+                            1000
+                        );
+                    }
+                );
+            }
+        );
+    });
+</script>
