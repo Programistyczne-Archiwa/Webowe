@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script src="figury.js"></script>
+
+        <p id="fig"></p>
+        <p>Płótno:</p>
+        <canvas
+            id="figura"
+            width="300"
+            height="300"
+            style="border: 1px solid #292929"
+        >
+            Twoja przegladarka nie obsługuje elementu canvas HTML5.</canvas
+        >
+        <p id="fig"></p>
+        <p id="figKo"></p>
+        <p id="figKw"></p>
+
+        <script>
+            // Opis figury
+            var f = document.getElementById("fig");
+            f.innerHTML = fig.opis();
+            // Pobranie płótna i narysowanie figury
+            fig.setCanvas(document.getElementById("figura"));
+            fig.rysuj();
+
+            var f = document.getElementById("fig");
+            f.innerHTML = fig.opis();
+            var fKo = document.getElementById("figKo");
+            fKo.innerHTML = figKo.opis();
+            fig.setCanvas(document.getElementById("figura"));
+            fig.rysuj();
+            figKo.setCanvas(document.getElementById("figura"));
+            figKo.rysuj();
+
+            var f = document.getElementById("fig");
+            f.innerHTML = fig.opis();
+            var fKw = document.getElementById("figKw");
+            fKw.innerHTML = figKw.opis();
+            fig.setCanvas(document.getElementById("figura"));
+            fig.rysuj();
+            figKw.setCanvas(document.getElementById("figura"));
+            figKw.rysuj();
+        </script>
+    </body>
+</html>
